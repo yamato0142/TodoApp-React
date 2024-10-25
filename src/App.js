@@ -1,8 +1,14 @@
+import { BrowserRouter, Routes, Route} from "react-router-dom";
+import { TodoApp } from "./components/Todo/TodoApp.jsx";
 import './App.css';
 
 function App() {
   return (
-    <h1>Hello World!</h1>
+    <BrowserRouter>
+      <Routes>
+        <Route path={`/`} element={<TodoApp></TodoApp>}></Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
