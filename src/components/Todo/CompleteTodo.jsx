@@ -39,23 +39,20 @@ const Button = styled.button`
 `;
 
 
-export const CompleteTodo = () => {
+export const CompleteTodo = (props) => {
+    const {todos} = props;
     return (
         <CompleteArea>
             <Title>完了のTODO</Title>
             <ul>
-                <li>
-                    <ListRow>
-                        <TodoItem>TODOでした</TodoItem>
-                        <Button>戻す</Button>
+                {todos.map((todo, index) => (
+                    <li key={index}>
+                        <ListRow>
+                            <TodoItem>{todo}</TodoItem>
+                            <Button>戻す</Button>
                     </ListRow>
-                </li>
-                <li>
-                    <ListRow>
-                        <TodoItem>TODOでした</TodoItem>
-                        <Button>戻す</Button>
-                    </ListRow>
-                </li>
+                    </li>
+                ))}
             </ul>
         </CompleteArea>
     )
