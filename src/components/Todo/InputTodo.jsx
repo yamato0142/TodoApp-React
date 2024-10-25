@@ -2,6 +2,12 @@
 
 export const InputTodo = () => {
     return (
-        <p>入力エリア</p>
+        <>
+            <input
+                placeholder="TODOを入力"
+                
+            />
+            <button >追加</button>
+        </>
     )
 }
