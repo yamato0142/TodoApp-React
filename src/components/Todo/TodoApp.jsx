@@ -1,7 +1,21 @@
-
+import { CompleteTodo } from "./CompleteTodo";
+import { InCompleteTodo } from "./IncompleteTodo";
+import {InputTodo} from "./InputTodo";
 
 export const TodoApp = () => {
     return (
-        <p>TodoAppです</p>
+        <>
+            <InputTodo>
+            
+            </InputTodo>
+
+            <InCompleteTodo>
+
+            </InCompleteTodo>
+
+            <CompleteTodo>
+                
+            </CompleteTodo>
+        </>
     );
 };
