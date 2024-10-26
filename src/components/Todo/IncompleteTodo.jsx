@@ -39,7 +39,7 @@ const Button = styled.button`
 
 
 export const InCompleteTodo = (props) => {
-    const { todos, onClickDelete} = props;
+    const { todos, onClickComplete,onClickDelete} = props;
     return (
         <IncompleteArea>
             <Title>未完了のTODO</Title>
@@ -48,7 +48,7 @@ export const InCompleteTodo = (props) => {
                     <li key={index}>
                         <ListRow>
                             <TodoItem>{todo}</TodoItem>
-                            <Button>完了</Button>
+                            <Button onClick={() => onClickComplete(index)}>完了</Button>
                             <Button onClick={() => onClickDelete(index)}>削除</Button>
                         </ListRow>
                     </li>

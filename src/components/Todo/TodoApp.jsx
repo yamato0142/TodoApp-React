@@ -28,6 +28,10 @@ export const TodoApp = () => {
         setTodoText("");
     }
 
+    const onClickComplete = (index) => {
+        alert(index)
+    }
+
     const onClickDelete = (index) => {
         const newTodos = [...incompleteTodos];
         newTodos.splice(index, 1);
@@ -44,6 +48,7 @@ export const TodoApp = () => {
 
             <InCompleteTodo 
                 todos = {incompleteTodos}
+                onClickComplete = {onClickComplete}
                 onClickDelete = {onClickDelete}
             />
                 
