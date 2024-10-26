@@ -49,7 +49,7 @@ export const InCompleteTodo = (props) => {
                         <ListRow>
                             <TodoItem>{todo}</TodoItem>
                             <Button>完了</Button>
-                            <Button onClick={onClickDelete}>削除</Button>
+                            <Button onClick={() => onClickDelete(index)}>削除</Button>
                         </ListRow>
                     </li>
                 ))}

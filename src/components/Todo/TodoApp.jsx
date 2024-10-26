@@ -28,8 +28,10 @@ export const TodoApp = () => {
         setTodoText("");
     }
 
-    const onClickDelete = () => {
-        alert("削除ボタンです")
+    const onClickDelete = (index) => {
+        const newTodos = [...incompleteTodos];
+        newTodos.splice(index, 1);
+        setIncompleteTodos(newTodos);
     }
 
     return (
