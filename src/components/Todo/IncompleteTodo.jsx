@@ -38,25 +38,21 @@ const Button = styled.button`
 `;
 
 
-export const InCompleteTodo = () => {
+export const InCompleteTodo = (props) => {
+    const { todos } = props;
     return (
         <IncompleteArea>
             <Title>未完了のTODO</Title>
             <ul>
-                <li>
-                    <ListRow>
-                        <TodoItem>TODOです</TodoItem>
-                        <Button>完了</Button>
-                        <Button>削除</Button>
-                    </ListRow>
-                </li>
-                <li>
-                    <ListRow>
-                        <TodoItem>TODOです</TodoItem>
-                        <Button>完了</Button>
-                        <Button>削除</Button>
-                    </ListRow>
-                </li>
+                {todos.map((todo, index) => (
+                    <li key={index}>
+                        <ListRow>
+                            <TodoItem>{todo}</TodoItem>
+                            <Button>完了</Button>
+                            <Button>削除</Button>
+                        </ListRow>
+                    </li>
+                ))}
             </ul>
         </IncompleteArea>
     )
