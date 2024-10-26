@@ -29,7 +29,12 @@ export const TodoApp = () => {
     }
 
     const onClickComplete = (index) => {
-        alert(index)
+        const newIncompleteTodos = [...incompleteTodos];
+        newIncompleteTodos.splice(index, 1);
+
+        const newCompleteTodos = [...completeTodos, incompleteTodos[index]];
+        setIncompleteTodos(newIncompleteTodos);
+        setcompleteTodos(newCompleteTodos);
     }
 
     const onClickDelete = (index) => {
