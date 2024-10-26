@@ -40,7 +40,7 @@ const Button = styled.button`
 
 
 export const CompleteTodo = (props) => {
-    const {todos} = props;
+    const {todos, onClickBack} = props;
     return (
         <CompleteArea>
             <Title>完了のTODO</Title>
@@ -49,7 +49,7 @@ export const CompleteTodo = (props) => {
                     <li key={index}>
                         <ListRow>
                             <TodoItem>{todo}</TodoItem>
-                            <Button>戻す</Button>
+                            <Button onClick={() => {onClickBack(index)}}>戻す</Button>
                     </ListRow>
                     </li>
                 ))}

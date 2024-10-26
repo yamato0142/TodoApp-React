@@ -43,6 +43,15 @@ export const TodoApp = () => {
         setIncompleteTodos(newTodos);
     }
 
+    const onClickBack = (index) => {
+        const newCompleteTodos = [...completeTodos];
+        newCompleteTodos.splice(index, 1);
+
+        const newIncompleteTodos = [...incompleteTodos, completeTodos[index]];
+        setIncompleteTodos(newIncompleteTodos);
+        setcompleteTodos(newCompleteTodos);
+    }
+
     return (
         <>
             <InputTodo 
@@ -59,6 +68,7 @@ export const TodoApp = () => {
                 
             <CompleteTodo 
                 todos = {completeTodos}
+                onClickBack = {onClickBack}
             />
         </>
     );
