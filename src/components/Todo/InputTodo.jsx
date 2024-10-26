@@ -29,13 +29,13 @@ const Button = styled.button`
 `;
 
 export const InputTodo = (props) => {
-    const {todoText, onClickAdd} = props;
+    const {todoText, onChange, onClickAdd} = props;
     return (
         <InputArea>
             <Input
                 placeholder="TODOを入力"
                 value={todoText}
-                
+                onChange={onChange}
             />
             <Button onClick={onClickAdd}>追加</Button>
         </InputArea>

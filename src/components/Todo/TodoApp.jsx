@@ -4,7 +4,7 @@ import { InCompleteTodo } from "./IncompleteTodo";
 import {InputTodo} from "./InputTodo";
 
 export const TodoApp = () => {
-    const [todoText, setTodoText] = useState("fff");
+    const [todoText, setTodoText] = useState("");
 
     const [incompleteTodos, setIncompleteTodos] = useState([
         "TODOです1",
@@ -15,6 +15,10 @@ export const TodoApp = () => {
         "TODOでした1",
         "TODOでした2",
     ]);
+    
+    const onChangeTodoText = (event) => {
+        setTodoText(event.target.value);
+    }
 
     const onClickAdd = () => {
         if (todoText==="") return;
@@ -28,6 +32,7 @@ export const TodoApp = () => {
         <>
             <InputTodo 
                 todoText={todoText}
+                onChange={onChangeTodoText}
                 onClickAdd={onClickAdd}
             />
 
