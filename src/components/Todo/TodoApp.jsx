@@ -5,16 +5,8 @@ import {InputTodo} from "./InputTodo";
 
 export const TodoApp = () => {
     const [todoText, setTodoText] = useState("");
-
-    const [incompleteTodos, setIncompleteTodos] = useState([
-        "TODOです1",
-        "TODOです2",
-    ]);
-
-    const [completeTodos, setcompleteTodos] = useState([
-        "TODOでした1",
-        "TODOでした2",
-    ]);
+    const [incompleteTodos, setIncompleteTodos] = useState([]);
+    const [completeTodos, setcompleteTodos] = useState([]);
     
     const onChangeTodoText = (event) => {
         setTodoText(event.target.value);
