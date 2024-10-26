@@ -28,6 +28,10 @@ export const TodoApp = () => {
         setTodoText("");
     }
 
+    const onClickDelete = () => {
+        alert("削除ボタンです")
+    }
+
     return (
         <>
             <InputTodo 
@@ -38,6 +42,7 @@ export const TodoApp = () => {
 
             <InCompleteTodo 
                 todos = {incompleteTodos}
+                onClickDelete = {onClickDelete}
             />
                 
             <CompleteTodo 
